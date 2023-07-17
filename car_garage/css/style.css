@@ -1,0 +1,212 @@
+:root {
+  --primary-color: #c93d17;
+  --dark-color: #101010;
+  --text-color: #f7f7f7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: var(--dark-color);
+}
+
+/** Carousel CSS Starts here **/
+
+.carousel .carousel-img {
+  height: 500px;
+}
+
+.carousel .carousel-item img {
+  vertical-align: middle;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.carousel .carousel-img::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* inset: 0; */
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgb(0 0 0 / 79%);
+}
+
+.carousel-caption {
+  top: 30%;
+  bottom: 0;
+  right: 0;
+  left: 10%;
+  color: #fff;
+  max-width: 500px;
+  text-align: left;
+}
+
+.carousel-buttons .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  bottom: 5%;
+  left: auto;
+  /* right: auto; */
+  top: auto;
+  background: black;
+  padding: 1rem;
+  margin-right: 40px;
+  opacity: 1;
+}
+
+.carousel-buttons .carousel-control-prev {
+  width: 50px;
+  height: 50px;
+  bottom: 5%;
+  /* right: auto; */
+  top: auto;
+  left: auto;
+  right: 100px;
+  background: black;
+  padding: 1rem;
+  opacity: 1;
+}
+
+/** Carousel CSS Ends here **/
+
+.btn-custom {
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+}
+
+.btn-custom:hover,
+.btn-submit,
+.btn-submit:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.custom-color {
+  color: var(--primary-color);
+}
+
+/** Gallery CSS Starts here **/
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Main CSS */
+.grid-wrapper > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-wrapper > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.grid-wrapper > div > img:hover {
+  cursor: pointer;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+.grid-wrapper .wide {
+  grid-column: span 2;
+}
+.grid-wrapper .tall {
+  grid-row: span 2;
+}
+.grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/** Carousel CSS ends here **/
+
+footer {
+  background: var(--dark-color);
+}
+
+#contact {
+  background-color: var(--dark-color);
+}
+
+/** Spinner CSS Starts here **/
+
+.spinner-container,
+#spinnerContainer {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.spinner-container img {
+  position: absolute;
+  width: 120px;
+}
+
+.spinner-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-color);
+}
+
+.spinner {
+  width: 170px;
+  height: 170px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animation for the spinner */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/** Carousel CSS ends here **/
+
+.submit-message {
+  background-color: var(--primary-color);
+}
